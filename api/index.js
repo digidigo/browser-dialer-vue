@@ -16,7 +16,7 @@ app.use(urlencoded({ extended: false }));
 require("dotenv").load();
 
 // Generate a Twilio Client capability token
-app.get("/api//token", (request, response) => {
+app.get("/token", (request, response) => {
   const capability = new ClientCapability({
     accountSid: process.env.TWILIO_ACCOUNT_SID,
     authToken: process.env.TWILIO_AUTH_TOKEN,
@@ -37,7 +37,7 @@ app.get("/api//token", (request, response) => {
 });
 
 // Create TwiML for outbound calls
-app.post("/api/voice", (request, response) => {
+app.post("/voice", (request, response) => {
   const voiceResponse = new VoiceResponse();
   voiceResponse.dial(
     {
