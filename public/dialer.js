@@ -32,7 +32,7 @@
       var self = this;
 
       // Fetch Twilio capability token from our Node.js server
-      $.getJSON("/token")
+      $.getJSON("/api/token")
         .done(function (data) {
           console.log(data.token);
           Twilio.Device.setup(data.token);
