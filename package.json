@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "build": "echo build",
     "test": "NODE_ENV=test TWILIO_ACCOUNT_SID=my-account-sid TWILIO_AUTH_TOKEN=my-auth-token TWILIO_NUMBER=my-twilio-number TWILIO_TWIML_APP_SID=app-sid ./node_modules/mocha/bin/mocha spec --recursive"
   },
   "author": "Twilio DevEd",
@@ -13,6 +14,7 @@
     "body-parser": "^1.15.2",
     "dotenv": "^5.0.1",
     "express": "^4.14.0",
+    "morgan": "^1.10.0",
     "twilio": "~3.17.1"
   },
   "devDependencies": {
